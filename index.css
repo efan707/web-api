@@ -1,0 +1,255 @@
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+margin: 0;
+padding: 0;
+}
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+/*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+border-bottom: 1px dotted;
+cursor: help;
+}
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+border: none;
+height: 1px;
+}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+
+body{
+    overflow-y:hidden;
+background-color:#f5f5f3;
+background-position:12345px center;
+}
+@font-face
+{
+font-family: myFont;
+src: url('./handwrite.TTF');
+}
+
+#pp-nav{
+    display: none;
+}
+#nav{
+    height: 66px;
+    width: 648px;
+    position: fixed;
+    left: 27%;
+    bottom: 15px;
+    border: 1px dashed white;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px white;
+}
+#nav ul li{
+    position: relative;
+    float: left;
+    height: 43px;
+    width: 46px;
+    margin:8px 10px;
+    padding: 3px;
+    background-color:;
+}
+#nav ul li p{
+    cursor: pointer;
+    font-size:1.3em; 
+    color:white;
+    opacity: 0;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+}
+#nav ul li img{
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+}
+#nav ul li:hover img{
+    cursor: pointer;
+    transform:scale(1.3);
+    -ms-transform:scale(1.3);
+    -moz-transform:scale(1.3);
+    -webkit-transform:scale(1.3);
+    -o-transform:scale(1.3);
+}
+#nav ul li:hover p{
+    opacity: 1;
+    transform: translateY(-80px);
+    -ms-transform:translateY(-80px);
+    -moz-transform:translateY(-80px);
+    -webkit-transform:translateY(-80px);
+    -o-transform:translateY(-80px);
+}
+#pagepiling .section .content{
+    height: 500px;
+    width: 100%;
+    position: relative;
+    top: -60px;
+}
+.section #map{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+.section #search{
+    position: relative;
+    padding:5px; 
+    width: 500px;
+    height: 54px;
+    top: 210px;
+    left: 32%;
+}
+#search ul#select{
+   font-size: 1.2em;
+   position: absolute;
+   width:70px;
+   height: 18px;
+   overflow: hidden;
+   padding: 3px 3px;
+   top: 6px;
+}
+#search ul li{
+    background-color: white;
+    color: gray;
+    padding: 6px 0;
+    text-align: center;
+}
+#search ul li:hover{
+    background-color: #3385ff;
+    color: white;
+    cursor: pointer;
+}
+#search .selected{
+    background: white url("./img/updown.png") no-repeat scroll 8px -30px;
+}
+#search .selected:hover{
+    color: gray;
+    background: white url("./img/updown.png") no-repeat scroll 9px -2px;
+}
+#search #keyword{
+    float: left;
+    width: 400px;
+    height: 34px;
+    font-size: 1.2em;
+    padding: 5px 8px 5px  80px;
+    border: 1px solid  #3385ff;
+}
+#search #btn{
+    float: left;
+    height: 34px;
+    width: 80px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #3385ff;
+    color: white;
+    border: 0 none;   
+}
+.content #weather{
+    margin:150px auto;
+    height: 100%;
+    width: 300px;
+}
+.content #others{
+   color:white;
+   font-size: 1.4em; 
+   padding: 15px 15px;
+   margin:250px auto;
+   height:55px;
+   width: 240px;
+   border: 1px dashed white;
+}
+.content #table{
+    padding-left: 340px;
+    position: relative;
+    top: -6px;
+}
+.content #video{
+   position: relative;
+   top: 60px;
+   left: 400px;
+   z-index: 3000;
+}
+.content #music{
+    width: 420px;
+    height: 190px;
+    margin:200px auto;
+}
+.content #img{
+    width: 260px;
+    height: 120px;
+    position: relative;
+    left: 550px;
+    top: 200px;
+}
+.content #analytics{
+    position: absolute;
+    top: 200px;
+    left: 560px;
+}
+.content #analytics a{ 
+    font-family: myFont,Georgia,Serif;
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+     transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+}
+
+.content #analytics a:hover { 
+    text-decoration:none;
+    font-family: myFont,Georgia,Serif;
+    transform:scale(1.3);
+    -ms-transform:scale(1.3);
+    -moz-transform:scale(1.3);
+    -webkit-transform:scale(1.3);
+    -o-transform:scale(1.3);
+} 
