@@ -41,7 +41,7 @@ jQuery(document).ready(function($) {
   });
 
   var actionArr=["https://www.google.com.hk",'http://www.baidu.com/s',
-     'http://s.weibo.com/weibo/yy','http://www.zhihu.com/search',
+     'http://s.weibo.com/weibo/','http://www.zhihu.com/search',
      'http://s.taobao.com/search','http://www.amazon.cn/s/ref=nb_sb_noss_2',
      'http://zs.meituan.com/s','http://search.dangdang.com/',
      'http://zh.wikipedia.org/w/index.php','http://zhidao.baidu.com/search'];
